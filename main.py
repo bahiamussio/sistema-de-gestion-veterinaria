@@ -29,8 +29,8 @@ def registrar_mascota():
 
 def registrar_cliente():
     nombre = input("Nombre del cliente: ")
-    direccion = input("Dirección del cliente:")
-    telefono = input("Teléfono del cliente:")
+    direccion = input("Dirección del cliente: ")
+    telefono = input("Teléfono del cliente: ")
     cliente = Cliente(nombre, direccion, telefono)
     return cliente
 

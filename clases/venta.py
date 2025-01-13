@@ -1,8 +1,7 @@
 import datetime
 
-
 class Venta:
-    def __init_(self, cliente, lista_de_productos):
+    def __init__(self, cliente, lista_de_productos):
         self.cliente = cliente
         self.lista_de_productos = lista_de_productos
         self.fecha = datetime.datetime.now()
@@ -13,8 +12,8 @@ class Venta:
 
     def registrar_venta(self):
         self.cliente.registrar_compra(self)
-        return f"Venta registrada: {self.mostrar_informacion}"
+        return f"Venta registrada: {self.mostrar_informacion()}"
 
     def mostrar_informacion(self):
         productos = ", ".join([producto.nombre for producto in self.lista_de_productos])
-        return f"Cliente: {self.cliente.nombre}, Productos: {productos}, Total: {self.total}"
+        return f"Cliente: {self.cliente.nombre}, Productos: {productos}, Total: ${self.total:.2f}"
